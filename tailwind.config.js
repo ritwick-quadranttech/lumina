@@ -33,7 +33,7 @@ module.exports = {
       container: {
         screens: {
           DEFAULT: '100%',
-          sm: '600px',
+          sm: '768px',
           md: '880px',
           lg: '984px',
           xl: '1240px',

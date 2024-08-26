@@ -1621,8 +1621,12 @@ footer {
         line-height: 150%;
     }
     .logo-inner {
-        /* position: absolute; */
+        position: absolute;
+
         width: calc(100% - 37px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .content-1 .img,

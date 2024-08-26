@@ -40,13 +40,13 @@ navbtn.addEventListener('click', () => {
     slidebar.classList.toggle('active')
     navbtn.classList.toggle('active')    //nav button icon change
 })
+
 var lastscroltop = 0;
 window.addEventListener("scroll", function () {
     var scrolToTop = window.scrollY || this.document.documentElement.scrollTop
     if (scrolToTop > lastscroltop) {
         slidebar.classList.remove("active")
         navbtn.classList.remove('active')    //nav button icon change
-
     }
 })
 
@@ -62,11 +62,14 @@ if (catagorylists) {
         item.addEventListener("click", () => {
             textOptions.forEach(option => {
                 option.classList.remove("active")
+
             })
             catagorylists.forEach(menuItem => {
                 menuItem.classList.remove("active");
             })
             textOptions[index].classList.add("active")
+            // textOptions.classList.add("visible");
+
             item.classList.add("active");
         })
     })

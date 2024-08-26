@@ -144,7 +144,7 @@ h6 {
     line-height: 168%;
 }
 
-/* .visible {
+.visible {
 
     animation: visible 1s ease forwards;
 }
@@ -161,7 +161,20 @@ h6 {
         transform: translateY(0);
         transition: 0.8s;
     }
-} */
+}
+@keyframes fade {
+    0% {    
+        opacity: 0;
+        transform: translateY(60px);
+        transition: 0.8s;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transition: 0.8s;
+    }
+}
 
 
 main {
@@ -353,6 +366,8 @@ start banner---------- */
 .body-catagory-list-option.active {
     display: inline-flex;
     width: calc(100% - 442px);
+    animation: fade 0.8s ease-in-out;
+ 
 }
 
 /* -----------------
@@ -767,7 +782,7 @@ all stepes section----------- */
     width: 100%;
     background-color: #FBF8F5;
     display: flex;
-    padding: 90px 0 90px 0;
+    padding: 60px 0 60px 0;
 
 }
 
@@ -919,6 +934,12 @@ footer {
 
     .all-stepes {
         padding-bottom: 135px !important;
+    }
+    .content-writer-img  {
+        padding-bottom: 10px;
+    }
+    .advance-mri {
+        padding: 80px 0;
     }
 }
 
@@ -1127,6 +1148,9 @@ footer {
     .stepes-contain {
         flex-direction: column;
     }
+    .brain-img{
+        display: none;
+    }
 }
 
 
@@ -1150,6 +1174,9 @@ footer {
         margin: 0 auto;
     }
 
+    .slider-bar {
+        display: inline-block;
+    }
     :root {
 
         /* font size */
@@ -1171,9 +1198,9 @@ footer {
         gap: 55px;
     }
 
-    .slider-bar {
+    /* .slider-bar {
         display: inline-block;
-    }
+    } */
 
     .header-items {
         display: none;
@@ -1473,7 +1500,7 @@ footer {
     }
     .setpes-header h2{
         font-size: var(--fontsize-32px);
-        text-align:justify;
+        text-align:start;
     }
     .stepes-contain-text1 h5 {
         font-size: var(--fontsize-16px);
@@ -1583,7 +1610,16 @@ footer {
     .mpb-inner {
         position: relative;
     }
-
+   
+    .banner-heading h1 {
+        font-size: var(--fontsize-32px);
+    }
+    .banner-heading p {
+        font-size: var(--fontsize-18px);
+    }
+    .heding h2,.setpes-header h2{
+        line-height: 150%;
+    }
     .logo-inner {
         /* position: absolute; */
         width: calc(100% - 37px);

@@ -1,20 +1,20 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
-  
+
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
-      clickable:true
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        el: '.swiper-pagination',
+        clickable: true
     },
 
-  });
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
 // ------------loder tranform------------
 const sections = document.querySelectorAll("section");
 const observer_opacity = new IntersectionObserver((entries) => {
@@ -38,13 +38,14 @@ let body = document.querySelector('body')
 let slidebar = document.querySelector('.slider-bar');
 navbtn.addEventListener('click', () => {
     slidebar.classList.toggle('active')
-    navbtn.classList.toggle('active')
+    navbtn.classList.toggle('active')    //nav button icon change
 })
 var lastscroltop = 0;
 window.addEventListener("scroll", function () {
     var scrolToTop = window.scrollY || this.document.documentElement.scrollTop
     if (scrolToTop > lastscroltop) {
         slidebar.classList.remove("active")
+        navbtn.classList.remove('active')    //nav button icon change
 
     }
 })
@@ -57,7 +58,7 @@ if (catagorylists) {
     textOptions[0].classList.add("active")
     catagorylists.forEach((item, index) => {
         console.warn(index);
-        
+
         item.addEventListener("click", () => {
             textOptions.forEach(option => {
                 option.classList.remove("active")

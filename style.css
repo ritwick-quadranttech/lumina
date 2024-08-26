@@ -100,6 +100,12 @@ h2 {
 h3 {
     font-size: 1.5rem;
     /* 24px */
+    color: var(--colors-text-white, #FAFAFA);
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 46.8px */
 
 }
 
@@ -194,18 +200,13 @@ header,
 .nav-items ul li {
     color: var(--colors-text-default);
     font-family: Khula;
-    font-size: var(--fontsize-16px);
+    font-size: var(--fontsize-18px);
     font-style: normal;
     font-weight: var(--font-weight-600);
-    line-height: 2.563rem;
+    line-height: 41.5px;
 
     font-weight: 600;
 
-}
-
-.nav-log svg {
-    width: 125px;
-    height: fit-content;
 }
 
 .scan-btn {
@@ -227,7 +228,7 @@ header,
     position: absolute;
     transition: all 0.4s ease-in;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 70px);
     border-bottom-right-radius: 20px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
     overflow-y: hidden;
@@ -409,6 +410,7 @@ start body-decription ------------- */
 }
 
 .body-catagory-list {
+
     /* border: var(--border); */
     max-width: 674px;
     border-bottom: 1px solid var(--colors-border-basic, #D4D4D4);
@@ -476,6 +478,29 @@ start body-decription ------------- */
 
 .offers-text {
     max-width: 575px;
+    gap: 10px;
+
+}
+
+.offers-text h3 {
+    color: var(--colors-text-default, #374151);
+    font-family: Khula;
+    font-size: var(--fontsize-24px);
+    font-style: normal;
+    font-weight: var(--font-weight-600);
+    line-height: 120%;
+    /* 14.4px */
+
+}
+
+.offers-text p {
+    color: var(--colors-text-default, #374151);
+    font-family: Khula;
+    font-size: var(--fontsize-14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    line-height: 120%;
+    /* 14.4px */
 
 }
 
@@ -610,6 +635,7 @@ all stepes section----------- */
 
 .stepes-contain-header h4 {
     color: #FFF;
+    text-transform: capitalize;
 
 }
 
@@ -640,8 +666,9 @@ all stepes section----------- */
 
 .btn-primiry {
     display: flex;
-    padding: 15px 18px 15px 18px;
-    ;
+    /* padding: 15px 18px 15px 18px; */
+    width: 207px;
+    height: 56px;
     justify-content: center;
     align-items: center;
     border-radius: 43px;
@@ -667,10 +694,39 @@ all stepes section----------- */
 
 }
 
+.content-1 .img {
+    display: flex;
+    /* background: #030303; */
+    justify-content: center;
+    align-items: center;
+}
+
 .content-1 .img img {
     width: 100%;
     height: 100%;
 
+}
+
+.technology-btn .font-semibold h6 {
+    font-weight: var(--font-weight-600);
+    color: #182886;
+    text-align: center;
+
+
+    /* button-text */
+    font-family: Khula;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.technology-btn {
+    width: 192px;
+    height: 24px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .img-content {
@@ -846,6 +902,11 @@ footer {
 
 }
 
+.footer-svg svg:nth-child(2) {
+    display: none;
+
+}
+
 
 @media (max-width: 1440px) {
     .stepes-span {
@@ -854,6 +915,10 @@ footer {
 
     .advance-mri-content {
         width: 825px;
+    }
+
+    .all-stepes {
+        padding-bottom: 135px !important;
     }
 }
 
@@ -904,6 +969,10 @@ footer {
         align-items: center;
     }
 
+    .advance-mri-content {
+        align-items: flex-start;
+    }
+
     .all-stepes .offers-steps .middle-step {
         transform: none;
     }
@@ -940,7 +1009,7 @@ footer {
     }
 
     .content-writer {
-        padding: 60px 0 60px 0;
+        padding: 40px 0 40px 0;
     }
 
     .stepes-contain.third-step,
@@ -1048,6 +1117,16 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    /* stepes */
+    .offers-steps {
+
+        flex-direction: row;
+    }
+
+    .stepes-contain {
+        flex-direction: column;
+    }
 }
 
 
@@ -1091,19 +1170,27 @@ footer {
         align-items: flex-start;
         gap: 55px;
     }
-}
 
-@media (max-width: 768px) {
-    .header-items {
-        display: none;
+    .slider-bar {
+        display: inline-block;
     }
 
-    .brain-img {
+    .header-items {
         display: none;
     }
 
     .mobile-nav {
         display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+    .brain-img {
+        display: none;
+    }
+
+    .logo-inner {
+        width: 100%;
     }
 
     .body-catagory-list-option {
@@ -1202,6 +1289,16 @@ footer {
     .coustomer-imges {
         width: 110px;
     }
+
+    /* stepes */
+    .offers-steps {
+
+        flex-direction: column;
+    }
+
+    .stepes-contain {
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1262,7 +1359,7 @@ footer {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        gap: 20px;
+
     }
 
     .content-1 .img,
@@ -1325,7 +1422,7 @@ footer {
 
     footer span svg {
         width: 130px;
-        height: fit-conte 15
+        height: fit-content;
     }
 
     .offers-text {
@@ -1337,27 +1434,63 @@ footer {
     .mobile-nav .btn-primiry {
         display: none;
     }
-
-    .logo-inner {
+.banner{
+    height: 795px;
+}
+    .logo-inner-img {
         width: 160px;
+    }
+
+    .logo-inner-img img {
+        width: 100%;
     }
 
     .body-catagory-list-content {
         max-width: 353px;
     }
 
+    .body-catagory-list {
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 2.5rem;
+    }
+
+    .footer-condition h6 {
+        text-align: center;
+    }
+
+    .body-catagory-list::-webkit-scrollbar {
+        display: none;
+    }
+    .stepes-contain-header h4 {
+        font-size: var(--fontsize-20px);
+
+    }
+    .offer-section{
+        display: none;
+    }
+    .setpes-header h2{
+        font-size: var(--fontsize-32px);
+        text-align:justify;
+    }
+    .stepes-contain-text1 h5 {
+        font-size: var(--fontsize-16px);
+    }
     h5 {
-        font-size: var(--fontsize-14px);
+        font-size: var(--fontsize-16px);
     }
 
     h2 {
-        font-size: var(--fontsize-24px);
+        font-size: 32px;
     }
-
-    .btn-primiry {
-        padding: 15px 19px 15px 19px;
+    .mri-heading h4{
+        font-size: 1rem;
     }
-
+    .mri-heading h1{
+        font-size: 1.875rem;
+    }
     .btn-primiry h6 {
         font-size: 1rem;
     }
@@ -1365,21 +1498,30 @@ footer {
     .coustomer-imges {
         width: 100px;
     }
-    .footer-option{
+
+    .footer-option div {
         flex-direction: column;
         gap: 8px;
     }
-    .footer-list{
+
+    .footer-list {
         gap: 8px;
 
     }
-    .vid svg:nth-child(1){
+
+    .footer-svg svg:nth-child(1) {
         display: none;
+    }
+
+    .footer-svg svg:nth-child(2) {
+        display: inline-block;
+        width: 490px;
+        height: 40px;
     }
 
     .our-coustomer {
         width: 357px;
-        flex-direction: column;
+        margin-bottom: 208px;
     }
 
     .search-content-text h1 {
@@ -1399,8 +1541,21 @@ footer {
         font-size: 0.875rem;
     }
 
+    .footer-items svg {
+        width: 19px;
+        height: 25px;
+    }
+
     .search-content {
         bottom: 0;
+    }
+
+    .mpb-inner {
+        width: 100%;
+    }
+
+    .body-catagory-list-option.active {
+        justify-content: center;
     }
 
     .search-content-text h6 {
@@ -1411,49 +1566,76 @@ footer {
         flex-direction: column;
         max-width: 305px;
     }
+
     header {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
-    .mobile-nav-inner{
+
+    .mobile-nav-inner {
         padding: 0;
     }
+
     .advance-mri-content {
         align-items: center;
     }
-.mpb-inner{
-    position: relative;
-}
-.logo-inner{
-    position: absolute;
-}
+
+    .mpb-inner {
+        position: relative;
+    }
+
+    .logo-inner {
+        /* position: absolute; */
+        width: calc(100% - 37px);
+    }
+
     .content-1 .img,
     .img-content {
         max-width: 100%;
         width: 90%;
     }
+
     .img-content2 {
         max-width: 100%;
         width: 100% !important;
     }
+
     .img-content3 {
         max-width: 100%;
         width: 100% !important;
     }
+
     .search {
         height: 72px;
     }
+
+    .img-content-header h3 {
+        font-size: 1.4rem;
+    }
+
     .content-writer-inner h2 {
+        width: 396px;
         font-size: var(--fontsize-18px);
     }
-    .stepes-contain{
+
+    .img-content-text h5 {
+        font-size: var(--fontsize-16px);
+    }
+
+    .stepes-contain {
         padding: 0;
     }
-    .all-stepes .offers-steps .middle-step{
+
+    .all-stepes .offers-steps .middle-step {
         padding: 0;
     }
-    .offers-steps{
+
+    .offers-steps {
         gap: 24px;
+    }
+
+    .bodys-contain {
+        row-gap: 3.125rem !important;
     }
 }
 
